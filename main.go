@@ -15,7 +15,7 @@ func main() {
 	router := mux.NewRouter()
 	router.Use(app.UserAccessAuthentication)
 
-	router.HandleFunc("/api/operation/", handle.Operation)
+	router.HandleFunc("/api/operation/", handle.Operation).Methods("POST")
 
 	port := os.Getenv("PORT")
 	if port == "" {

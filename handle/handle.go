@@ -2,7 +2,6 @@ package handle
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -45,8 +44,6 @@ func Operation(w http.ResponseWriter, r *http.Request) {
 			sum -= number
 		}
 	}
-
-	fmt.Printf("sum: %v\n", sum)
 
 	resp := utils.Message(true, "succes")
 	resp["data"] = sum
