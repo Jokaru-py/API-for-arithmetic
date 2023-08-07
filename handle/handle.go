@@ -39,10 +39,10 @@ func Operation(w http.ResponseWriter, r *http.Request) {
 				log.Printf("err.Error(): %v\n", err.Error())
 				break
 			}
-		}
 
-		if i == 0 {
-			v = strRune[i+1]
+			if i == 0 {
+				v = strRune[i+1]
+			}
 		}
 
 		if v == 43 { // Сложение
